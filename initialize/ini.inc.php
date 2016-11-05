@@ -126,7 +126,7 @@
 	// The number of records that's returned by default:
 	// Note that this setting also controls how many records will be returned by default for RSS, OpenSearch,
 	// SRU and CLI queries.
-	$defaultNumberOfRecords = 5;
+	$defaultNumberOfRecords = 10;
 
 
 	// The URL path to the main logo image that's displayed in the refbase header:
