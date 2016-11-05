@@ -340,7 +340,7 @@
 	                            "text_citation_format"            => "<:authors[2| & | et al.]:>< :year:>< {:recordIdentifier:}>", // e.g. "<:authors[2| & | et al.]:>< :year:>< {:recordIdentifier:}>"
 
 	                            // the user's preferred number of records that's returned by default:
-	                            "records_per_page"                => "5", // e.g. "5"
+	                            "records_per_page"                => "10", // e.g. "5"
 
 	                            // the user's preference for displaying auto-completions:
 	                            "show_auto_completions"           => "yes", // possible values: "yes", "no"
