@@ -725,6 +725,7 @@
 
 				$HeaderStringPart .= "found matching ";
 
+/* Removed 2016-Nov-5 to sanitizie HeaderString
 				if (isset($_SESSION['user_permissions']) AND preg_match("/allow_sql_search/", $_SESSION['user_permissions'])) // if the 'user_permissions' session variable contains 'allow_sql_search'...
 					// ...generate a link to 'sql_search.php' with a custom SQL query that matches the current result set & display options:
 					$HeaderString = $HeaderStringPart
@@ -737,9 +738,11 @@
 					              . "&amp;citeStyle=" . rawurlencode($citeStyle)
 					              . "&amp;citeOrder=" . $citeOrder
 					              . "\"" . addAccessKey("attribute", "sql_query") . " title=\"modify your current query" . addAccessKey("title", "sql_query") . "\">your query</a>"; // function 'addAccessKey()' is defined in 'include.inc.php'
-				else // use of 'sql_search.php' isn't allowed for this user
+				else // use of 'sql_search.php' isn't allowed for this user */
+				
 					$HeaderString = $HeaderStringPart . "your query"; // so we omit the link
 
+/* Removed 2016-Nov-5 to sanitizie HeaderString
 				// add query links:
 				$queryLinksArray = array();
 
@@ -789,11 +792,12 @@
 
 				if ($showQuery == "1")
 					$HeaderString .= ":\n<br>\n<br>\n<code>" . encodeHTML($query) . "</code>"; // function 'encodeHTML()' is defined in 'include.inc.php'
-				else // $showQuery == "0" or wasn't specified
+				else // $showQuery == "0" or wasn't specified */
+
 					$HeaderString .= ":";
 
 				if ($rowsFound > 0)
-					$HeaderString = ($rowOffset + 1) . "&#8211;" . $showMaxRow . " of " . $rowsFound . $HeaderString;
+					$HeaderString = ($rowOffset + 1) . "-" . $showMaxRow . " of " . $rowsFound . $HeaderString;
 				elseif ($rowsFound == 0)
 					$HeaderString = $rowsFound . $HeaderString;
 				else
