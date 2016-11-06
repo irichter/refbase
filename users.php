@@ -8,13 +8,13 @@
 	//             License for more details.
 	//
 	// File:       ./users.php
-	// Repository: $HeadURL: svn+ssh://karnesky@svn.code.sf.net/p/refbase/code/branches/bleeding-edge/users.php $
+	// Repository: $HeadURL$
 	// Author(s):  Matthias Steffens <mailto:refbase@extracts.de>
 	//
 	// Created:    29-Jun-03, 00:25
-	// Modified:   $Date: 2012-02-27 12:25:30 -0800 (Mon, 27 Feb 2012) $
-	//             $Author: msteffens $
-	//             $Revision: 1337 $
+	// Modified:   $Date$
+	//             $Author$
+	//             $Revision$
   //
 	// This script shows the admin a list of all user entries available within the 'users' table.
 	// User data will be shown in the familiar column view, complete with links to show a user's
@@ -242,7 +242,7 @@
 			$HeaderString = " users found:";
 
 		if ($rowsFound > 0)
-			$HeaderString = ($rowOffset + 1) . "&#8211;" . $showMaxRow . " of " . $rowsFound . $HeaderString;
+			$HeaderString = ($rowOffset + 1) . "-" . $showMaxRow . " of " . $rowsFound . $HeaderString;
 		elseif ($rowsFound == 0)
 			$HeaderString = $rowsFound . $HeaderString;
 	}
