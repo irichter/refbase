@@ -8,13 +8,13 @@
 	//             License for more details.
 	//
 	// File:       ./includes/include.inc.php
-	// Repository: $HeadURL: svn+ssh://karnesky@svn.code.sf.net/p/refbase/code/branches/bleeding-edge/includes/include.inc.php $
+	// Repository: $HeadURL$
 	// Author(s):  Matthias Steffens <mailto:refbase@extracts.de>
 	//
 	// Created:    16-Apr-02, 10:54
-	// Modified:   $Date: 2015-01-07 15:27:15 -0800 (Wed, 07 Jan 2015) $
-	//             $Author: karnesky $
-	//             $Revision: 1397 $
+	// Modified:   $Date$
+	//             $Author$
+	//             $Revision$
 
 	// This file contains important
 	// functions that are shared
@@ -2046,7 +2046,13 @@ EOF;
 		foreach($userMainFieldsArray as $userMainField)
 		{
 			// generate the variable name of the correct '$loc' locale for this field:
-			$dropDownFieldNameLocale = preg_replace("/_(\w)/e", "ucfirst('\\1')", $userMainField); // the 'e' modifier allows to execute PHP code within the replacement pattern
+			$dropDownFieldNameLocale = preg_replace_callback("/_(\w)/",
+				function($matches){
+					foreach($matches as $match){
+						return ucfirst($match);
+					}
+				},
+				$userMainField); 
 			$dropDownFieldNameLocale = "DropDownFieldName_" . ucfirst($dropDownFieldNameLocale);
 			// add this field's name and localized string to the array of fields that will be included in the "Quick Search" drop-down menu:
 			$dropDownFieldNameArray[$userMainField] = $loc[$dropDownFieldNameLocale];
