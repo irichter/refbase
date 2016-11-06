@@ -821,4 +821,5 @@
 	// documentation, tutorials, books and regex-aware applications. Alternatively, you're welcome to
 	// post a message to the refbase help forum: <http://sourceforge.net/forum/forum.php?forum_id=218758>
 
+	$ignoreAdminWarning = false;
 ?>
