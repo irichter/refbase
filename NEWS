@@ -9,6 +9,43 @@ Following sites list the refbase commit messages in chronological order
   <http://cia.vc/stats/project/refbase/>
   <https://www.ohloh.net/projects/refbase/commits>
 
+refbase-0.9.7
+-------------
+[DATE]
+
+  Changes
+---------
+
+Security:
+
+- Prevent refbase use when 'install.php' or 'update.php' are still present (a good practice anyway, but it works around CVE-2015-6008, CVE-2015-7381, CVW-2015-7382, and CVE-2015-7383 until we replace install.php with something better)
+
+- Verify that referer is on the same site (fixes CVE-2015-6012 and partially addresses CVE-2015-6007)
+
+- Prevent HTML injection attacks in more user-editable fields (fixes CVE-2008-6400 and CVE-2015-6010)
+
+- Whitelist for XSL files (fixes CVE-2015-6011)
+
+General:
+
+- Revise SQL files to meet new requirements of MySQL
+
+- Allow logged-in users to search locations
+
+- Increase default # of responses from 5 to 10
+
+Miscellaneous:
+
+- A lot of improvements to the MediaWiki plugin, including support for localization, HTTP AUTH, and MySQL/PDO
+
+  Bug fixes
+-----------
+
+- Fixed localization of type field in list view
+
+
+
+
 refbase-0.9.6
 -------------
 [28-FEB-2013]
