@@ -14,8 +14,8 @@ Suggestions for improving refbase:
   could be hidden from the interface.
 
 - Improve the installation process so that the web-based installer works with
-  more server setups (including installation on shared hosts), and allows to set
-  important config options via the web interface.
+  more server setups (including installation on shared hosts), and allows
+  setting important config options via the web interface.
 
 - More user-specific and record-specific rights management.
 
@@ -28,7 +28,7 @@ Suggestions for improving refbase:
 
 - Provide a machine-readable interface (API) that not only allows clients to
   query a refbase database and retrieve results in a structured format, but that
-  also allows to modify any database information.
+  also allows modification of any database information.
 
 - Provide better integration with desktop reference managers so that users could
   search an online refbase database from within their desktop application, or

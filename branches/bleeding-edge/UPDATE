@@ -1,6 +1,6 @@
 Please follow the steps below to update an existing refbase installation to
-refbase-0.9.6. The update script should also be able to update any refbase
-version that was installed from SVN prior to the release of refbase-0.9.6. To
+refbase-0.9.7. The update script should also be able to update any refbase
+version that was installed from SVN prior to the release of refbase-0.9.7. To
 update versions of refbase prior to refbase-0.8.0, please update to
 refbase-0.8.0 first.
 
@@ -28,7 +28,7 @@ refbase-0.8.0 first.
   'initialize/ini.inc.php'. Optionally, you may want to backup all of your
   existing refbase scripts.
 
-- Move all refbase-0.9.5 files to your server's web directory.
+- Move all refbase-0.9.7 files to your server's web directory.
 
 - Open the file 'initialize/db.inc.php' in a text editor and re-enter the
   values from your old 'db.inc.php' file for the variables '$databaseName',
