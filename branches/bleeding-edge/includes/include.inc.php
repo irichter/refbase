@@ -266,10 +266,9 @@
 			if (mysql_errno() != 0) // this works around a stupid(?) behaviour of the Roxen webserver that returns 'errno: 0' on success! ?:-(
 			{
 				if (isset($client) AND preg_match("/^cli/i", $client)) // if the query originated from a command line client such as the "refbase" CLI client ("cli-refbase-1.0")
-					// note that we also HTML encode the query for CLI clients since a malicious user could use the client parameter to perform a cross-site scripting (XSS) attack
-					showErrorMsg("Your query:\n\n" . encodeHTML($query) . "\n\ncaused the following error:");
+					showErrorMsg("Your query: " . encodeHTML($query) . "\n\ncaused the following error:");
 				else
-					showErrorMsg("Your query:\n<br>\n<br>\n<code>" . encodeHTML($query) . "</code>\n<br>\n<br>\n caused the following error:");
+					showErrorMsg("Your query: '" . $query . "' caused the following error:");
 			}
 
 		return $result;
