@@ -30,6 +30,14 @@
 
 	// --------------------------------------------------------------------
 
+	// Check for admin tools
+	if ((file_exists('install.php')||file_exists('update.php')) && $ignoreAdminWarning!=true){
+		echo "<head><title>Administartion tools detected</title></head><body><h1>Administration tools detected</h2><p>Please finish installing or updating refbase according to the instructions and then remove 'install.php' and 'update.php' from your installation.</p></body>";
+		exit;
+	}
+
+	// --------------------------------------------------------------------
+
 	// START A SESSION:
 	// call the 'start_session()' function (from 'include.inc.php') which will also read out available session variables:
 	start_session(true);
